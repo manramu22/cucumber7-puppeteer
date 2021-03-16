@@ -1,10 +1,6 @@
-const {Before,After, setDefaultTimeout} = require('@cucumber/cucumber')
+const {After} = require('@cucumber/cucumber')
 const appconfig = require('../config/appconfig')
 const scope = require('./support/scope')
-
-Before(async function(){
-    setDefaultTimeout(appconfig.DEEFAULT_TIMEOUT)
-});
 
 After(async function(){
 if( browser && page){
