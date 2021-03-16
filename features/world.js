@@ -1,5 +1,6 @@
 const {
-    setWorldConstructor
+    setWorldConstructor,
+    setDefaultTimeout
 } = require('@cucumber/cucumber')
 
 const appconfig = require('../config/appconfig')
@@ -13,3 +14,4 @@ const World = function({attach}){
 };
 
 setWorldConstructor(World);
+setDefaultTimeout(appconfig.DEEFAULT_TIMEOUT);
